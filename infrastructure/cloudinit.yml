@@ -1,0 +1,6 @@
+users:
+  - default
+  - name: "${username}"
+    groups: docker
+    ssh_authorized_keys:
+      - "${public_key}"
