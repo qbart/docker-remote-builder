@@ -30,6 +30,7 @@ export HCLOUD_TOKEN=your-token
 
 ```
 cd packer/
+packer init .
 packer build image.pkr.hcl
 ```
 

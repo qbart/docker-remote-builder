@@ -1,9 +1,18 @@
+packer {
+  required_plugins {
+    hcloud = {
+      version = ">= 1.1.1"
+      source  = "github.com/hetznercloud/hcloud"
+    }
+  }
+}
+
 variable "version" {
-  default = "0.1.0"
+  default = "0.2.0"
 }
 
 source "hcloud" "client" {
-  image       = "ubuntu-20.04"
+  image       = "ubuntu-22.04"
   location    = "fsn1"
   server_type = "cx21"
   snapshot_labels = {

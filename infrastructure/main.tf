@@ -13,7 +13,7 @@ data "cloudinit_config" "builder" {
 }
 
 data "hcloud_image" "builder" {
-  with_selector = "snapshot=docker,version=0.1.0"
+  with_selector = "snapshot=docker,version=0.2.0"
 }
 
 resource "hcloud_server" "builder" {
@@ -40,4 +40,3 @@ resource "hcloud_server_network" "builder" {
   subnet_id = hcloud_network_subnet.main.id
   ip        = "10.0.1.2"
 }
-

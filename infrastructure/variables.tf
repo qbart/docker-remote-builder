@@ -13,16 +13,6 @@ variable "domain" {
   description = "Domain name (docker host will become <subdomain>.<domain>)"
 }
 
-variable "hcloud_token" {
-  type        = string
-  description = "Hetzner Cloud token"
-}
-
-variable "hcloud_dns_token" {
-  type        = string
-  description = "Hetzner Cloud DNS api token"
-}
-
 # optional
 
 variable "subdomain" {
@@ -34,6 +24,5 @@ variable "subdomain" {
 variable "server_type" {
   type        = string
   description = "Server type used for docker builder"
-  default     = "cpx21"
+  default     = "cpx31"
 }
-
